@@ -19,7 +19,7 @@ let weatherAction = {
 				}
 			}).then(function (response) {
 				if(response.status===200&&response.data.cod==='200'){
-					toast.success('City Temperature retrieved successfully');
+					toast.success('Weather Forecast retrieved successfully');
 					dispatch(
 						{
 							type: types.WEATHER,
