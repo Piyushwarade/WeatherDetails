@@ -52,9 +52,9 @@ class Weather extends Component {
 					</div>
 				</div>
 				<div className="row">
-					<div className="col-md-4">
+					<div className="col-md-3">
 					</div>
-					<div className="col-md-4">
+					<div className="col-md-6">
 						<table className="table">
 							<thead>
 								<tr>
@@ -64,6 +64,15 @@ class Weather extends Component {
 									<th style={{ 'textAlign': 'center' }}>
 										Temperature
 									</th>
+									<th style={{ 'textAlign': 'center' }}>
+										Pressure
+									</th>
+									<th style={{ 'textAlign': 'center' }}>
+										Wind Speed
+									</th>
+									<th style={{ 'textAlign': 'center' }}>
+										Weather Description
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -71,13 +80,18 @@ class Weather extends Component {
 									<tr key={tempData.dt_txt}>
 										<td>{tempData.dt_txt}</td>
 										<td>{tempData.main.temp}</td>
+										<td>{tempData.main.pressure}</td>	
+										<td>{tempData.wind.speed}</td>
+										<td>{tempData.weather?tempData.weather.map((details)=>{
+											return(<option>{details.description}</option>)
+										},this):''}</td>																																							
 									</tr>
 								);
 								},this):''}
 							</tbody>
 						</table>
 					</div>
-					<div className="col-md-4">
+					<div className="col-md-3">
 					</div>
 				</div>
 				<div className="row">
