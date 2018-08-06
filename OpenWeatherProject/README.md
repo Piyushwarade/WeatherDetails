@@ -18,6 +18,6 @@ Run command "npm install" to install node_modules followed by "npm start" to sta
 
 Open browser with url "https://localhost:3000" to replicate the UI.
 
-Run command mocha in OpenWeatherProject folder to test API.
+Run command "npm install --global mocha" followed by "mocha" in OpenWeatherProject folder to test API.
 
 Thanks.
